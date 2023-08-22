@@ -49,5 +49,8 @@ typedef struct inst_t
 } inst_t;
 
 char *_realloc(char *ptr, unsigned int _old, unsigned int  _new);
+void k_plus(list_t **h, unsigned int co);
+void plusnode(list_t **head, int m);
+
 
 #endif /** MAIN_H */

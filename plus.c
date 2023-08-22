@@ -1,5 +1,7 @@
+#include "monty.h"
+
 /**
- * f_plus - ads two elements of the stack
+ * k_plus - ads two elements of the stack
  * @h: head
  * @co: line number
  * Return: nothing
@@ -7,7 +9,7 @@
 void k_plus(list_t **h, unsigned int co)
 {
 	list_t *head;
-	int l = 0, abs;
+	int l = 0, _abs;
 
 	head = *h;
 	while (head)
@@ -25,8 +27,8 @@ void k_plus(list_t **h, unsigned int co)
 		exit(EXIT_FAILURE);
 	}
 	head = *h;
-	abs = head->m + head->next->m;
-	head->next->m = abs;
+	_abs = head->m + head->next->m;
+	head->next->m = _abs;
 	*h = head->next;
 	free(head);
 }
