@@ -34,7 +34,7 @@ typedef struct data_t
 	char *arg;
 	FILE *f;
 	char *con;
-	int lif;
+	int pale;
 } data_t bus;
 
 /**
@@ -63,5 +63,6 @@ void top_print(list_t **head, unsigned int count);
 stack_pop(list_t **head, unsigned int count);
 void print_string(list_t **head, unsigned int count);
 void k_push(liist_t **head, unsigned int count);
-
+void myline(list_t **head, int m);
+void k_line(list_t **head, unsigned int count);
 #endif /** MAIN_H */
