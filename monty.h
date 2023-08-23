@@ -55,5 +55,6 @@ void k_chei(list_t **head, unsigned int co);
 int run_f(char *cont, list_t **list, unsigned int co, FILE *f);
 void mystack(list_t *head);
 void k_mod(list_t **head, unsigned int count);
+void k_mul(list_t **head, unsigned int count);
 
 #endif /** MAIN_H */
