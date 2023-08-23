@@ -51,6 +51,6 @@ typedef struct inst_t
 char *_realloc(char *ptr, unsigned int _old, unsigned int  _new);
 void k_plus(list_t **h, unsigned int co);
 void plusnode(list_t **head, int m);
-
+void k_chei(list_t **head, unsigned int co);
 
 #endif /** MAIN_H */
