@@ -59,5 +59,6 @@ void k_mul(list_t **head, unsigned int count);
 void k_void(list_t **head, unsigned int count);
 void k_print(list_t **head, unsigned int count);
 void char_print(list_t **head, unsigned int count);
+void top_print(list_t **head, unsigned int count);
 
 #endif /** MAIN_H */
