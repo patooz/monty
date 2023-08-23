@@ -62,5 +62,6 @@ void char_print(list_t **head, unsigned int count);
 void top_print(list_t **head, unsigned int count);
 stack_pop(list_t **head, unsigned int count);
 void print_string(list_t **head, unsigned int count);
+void k_push(liist_t **head, unsigned int count);
 
 #endif /** MAIN_H */
