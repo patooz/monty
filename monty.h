@@ -65,4 +65,5 @@ void print_string(list_t **head, unsigned int count);
 void k_push(liist_t **head, unsigned int count);
 void myline(list_t **head, int m);
 void k_line(list_t **head, unsigned int count);
+void rotate(stack_t **head, __attribute__((unused)) unsigned int count);
 #endif /** MAIN_H */
