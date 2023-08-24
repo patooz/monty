@@ -1,4 +1,4 @@
-#include "monty.c"
+#include "monty.h"
 /**
  * rotate - rounds up the stack
  * @head: head of the stack
@@ -7,7 +7,7 @@
  */
 void rotate(stack_t **head, __attribute__((unused)) unsigned int count)
 {
-	stack_t **t = *head, *_abs;
+	stack_t *t = *head, *_abs;
 
 	if (*head == NULL || (*head)->next == NULL)
 		return;

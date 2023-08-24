@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	FILE *f;
 	size_t s = 0;
 	ssize_t r_l = 1;
-	list_t *list = NULL;
+	stack_t *list = NULL;
 	unsigned int count = 0;
 
 	if (argc != 2)
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	{
 		cont = NULL;
 		r_l = getline(&cont, &s, f);
-		bus.cont = cont;
+		bus.con = cont;
 		count++;
 		if (r_l > 0)
 			run_f(cont, &list, count, f);
@@ -39,5 +39,5 @@ int main(int argc, char *argv[])
 	}
 	f_list(list);
 	fclose(f);
-	return (f);
+	return (0);
 }

@@ -8,10 +8,10 @@
  */
 void plusnode(stack_t **head, int n)
 {
-	list_t *_new, *_abs;
+	stack_t *_new, *_abs;
 
 	_abs = *head;
-	_new = malloc(sizeof(list_t));
+	_new = malloc(sizeof(stack_t));
 	if (_new == NULL)
 		exit(0);
 	if (_abs)

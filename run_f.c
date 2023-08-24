@@ -18,7 +18,7 @@ int run_f(char *cont, stack_t **list, unsigned int co, FILE *f)
 		{"swap", k_change},
 		{"add", k_plus},
 		{"nop", k_void},
-		{"sub", remove_stack,
+		{"sub", remove_stack},
 		{"mul", k_mul},
 		{"mod", k_mod},
 		{"pchar", char_print},
@@ -38,9 +38,9 @@ int run_f(char *cont, stack_t **list, unsigned int co, FILE *f)
 	bus.arg = strtok(NULL, " \n\t");
 	while (ptr[x].opcode && p)
 	{
-		if (strcmp(p, ptr[i].opcode) == 0)
+		if (strcmp(p, ptr[x].opcode) == 0)
 		{
-			ptr[x].funct(list, co);
+			ptr[x].f(list, co);
 			return (0);
 		}
 		x++;

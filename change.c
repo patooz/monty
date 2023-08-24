@@ -25,7 +25,7 @@ void k_change(stack_t **head, unsigned int count)
 		exit(EXIT_FAILURE);
 	}
 	i = *head;
-	_abs = i->m;
-	i->m = i->next->m;
-	i->next->m = _abs;
+	_abs = i->n;
+	i->n = i->next->n;
+	i->next->n = _abs;
 }

@@ -1,5 +1,6 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef MONTY_H
+#define MONTY_H
+#define _POSIX_C_SOURCE 200809L
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,13 +33,14 @@ typedef struct stack_s
  * @con: line content
  * @lif: flag change
  */
-typedef struct data_t
+typedef struct data_s
 {
 	char *arg;
 	FILE *f;
 	char *con;
 	int pale;
-} data_t bus;
+} data_t;
+extern data_t bus;
 
 /**
  * struct instruction_s - opcode and its function
@@ -66,7 +68,7 @@ void k_void(stack_t **head, unsigned int count);
 void k_print(stack_t **head, unsigned int count);
 void char_print(stack_t **head, unsigned int count);
 void top_print(stack_t **head, unsigned int count);
-stack_pop(stack_t **head, unsigned int count);
+void stack_pop(stack_t **head, unsigned int count);
 void print_string(stack_t **head, unsigned int count);
 void k_push(stack_t **head, unsigned int count);
 void myline(stack_t **head, int m);
@@ -77,4 +79,4 @@ void main_stack(stack_t **head, unsigned int count);
 void remove_stack(stack_t **head, unsigned int count);
 void k_change(stack_t **head, unsigned int count);
 
-#endif /** MAIN_H */
+#endif /** MONTY_H */

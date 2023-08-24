@@ -19,19 +19,19 @@ void k_chei(stack_t **head, unsigned int co)
 	}
 	if (l < 2)
 	{
-		fprint(stderr, "L%d: can't div, stack too short\n",
+		fprintf(stderr, "L%d: can't div, stack too short\n",
 				co);
 		fclose(bus.f);
-		free(bus.co);
+		free(bus.con);
 		f_list(*head);
 		exit(EXIT_FAILURE);
 	}
 	h = *head;
 	if (h->n == 0)
 	{
-		fprint(stderr, "L%d: division by zero\n", co);
+		fprintf(stderr, "L%d: division by zero\n", co);
 		fclose(bus.f);
-		free(bus.co);
+		free(bus.con);
 		f_list(*head);
 		exit(EXIT_FAILURE);
 	}

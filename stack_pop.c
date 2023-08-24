@@ -11,7 +11,7 @@ void stack_pop(stack_t **head, unsigned int count)
 
 	if (*head == NULL)
 	{
-		fprintf(stderr, "L%d: can't pop empty stack\n, count");
+		fprintf(stderr, "L%d: can't pop empty stack\n", count);
 		fclose(bus.f);
 		free(bus.con);
 		f_list(*head);

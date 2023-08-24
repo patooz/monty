@@ -22,8 +22,8 @@ void remove_stack(stack_t **head, unsigned int count)
 		exit(EXIT_FAILURE);
 	}
 	_abs = *head;
-	j = _abs->next->m - _abs->m;
-	_abs->next->m = j;
+	j = _abs->next->n - _abs->n;
+	_abs->next->n = j;
 	*head = _abs->next;
 	free(_abs);
 }

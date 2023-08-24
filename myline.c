@@ -5,7 +5,7 @@
  * @count: line counter
  * Return: nothing
  */
-void k_line(list_t **head, unsigned int count)
+void k_line(stack_t **head, unsigned int count)
 {
 	(void)head;
 	(void)count;
@@ -17,15 +17,15 @@ void k_line(list_t **head, unsigned int count)
  * @head: stack head
  * Return: nothing
  */
-void myline(list_t **head, int m)
+void myline(stack_t **head, int n)
 {
-	list_t *count, *_abs;
+	stack_t *count, *_abs;
 
 	_abs = *head;
-	count = malloc(sizeof(list_t));
+	count = malloc(sizeof(stack_t));
 	if (count == NULL)
 		printf("Error\n");
-	count->m = m;
+	count->n = n;
 	count->next = NULL;
 	if (_abs)
 	{
@@ -35,11 +35,11 @@ void myline(list_t **head, int m)
 	if (!_abs)
 	{
 		*head = count;
-		count->p = NULL;
+		count->prev = NULL;
 	}
 	else
 	{
 		_abs->next = count;
-		count->p = _abs;
+		count->prev = _abs;
 	}
 }
