@@ -10,19 +10,22 @@
 #include <ctype.h>
 
 /**
- * struct lists_t - double linked list of the stack
- * @m: integer
- * @p: previous element of the stack
- * @next: next elemnts of the stack
+ * struct stack_s - doubly linked list representation of a stack (or queue)
+ * @n: integer
+ * @prev: points to the previous element of the stack (or queue)
+ * @next: points to the next element of the stack (or queue)
+ *
+ * Description: doubly linked list node structure
+ * for stack, queues, LIFO, FIFO
  */
-typedef struct list_t
+typedef struct stack_s
 {
-	int m;
-	struct list_t *p;
-	struct list_t *next;
-} list_t;
+        int n;
+        struct stack_s *prev;
+        struct stack_s *next;
+} stack_t;
 
-/**
+/**stack_t
  * struct data_t - variables
  * @arg: value
  * @f: pointer to file
@@ -38,22 +41,25 @@ typedef struct data_t
 } data_t bus;
 
 /**
- * struct inst_t - opcode
- * @op: the opcode
- * @funct: function for opcode
+ * struct instruction_s - opcode and its function
+ * @opcode: the opcode
+ * @f: function to handle the opcode
+ *
+ * Description: opcode and its function
+ * for stack, queues, LIFO, FIFO
  */
-typedef struct inst_t
+typedef struct instruction_s
 {
-	char *op;
-	void (*funct)(list_t **list, unsigned int l_num);
-} inst_t;
+        char *opcode;
+        void (*f)(stack_t **stack, unsigned int line_number);
+} instruction_t;
 
 char *_realloc(char *ptr, unsigned int _old, unsigned int  _new);
 void k_plus(list_t **h, unsigned int co);
 void plusnode(list_t **head, int m);
 void k_chei(list_t **head, unsigned int co);
 int run_f(char *cont, list_t **list, unsigned int co, FILE *f);
-void mystack(list_t *head);
+void f_list(list_t *head);
 void k_mod(list_t **head, unsigned int count);
 void k_mul(list_t **head, unsigned int count);
 void k_void(list_t **head, unsigned int count);

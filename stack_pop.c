@@ -5,9 +5,9 @@
  * @count: line counter
  * Return: nothing
  */
-void stack_pop(list_t **head, unsigned int count)
+void stack_pop(stack_t **head, unsigned int count)
 {
-	list_t *i;
+	stack_t *i;
 
 	if (*head == NULL)
 	{

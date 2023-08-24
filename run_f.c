@@ -8,25 +8,25 @@
  * @cont: content
  * Return: nothing
  */
-int run_f(char *cont, list_t **list, unsigned int co, FILE *f)
+int run_f(char *cont, stack_t **list, unsigned int co, FILE *f)
 {
-	inst_t ptr[] = {
+	instruction_t ptr[] = {
 		{"push", k_push},
-		{"pall", k_pall},
-		{"pint", k_pint},
-		{"pop", k_pop},
-		{"swap", k_swap},
+		{"pall", k_print},
+		{"pint", top_print},
+		{"pop", stack_pop},
+		{"swap", k_change},
 		{"add", k_plus},
-		{"nop", k_nop},
-		{"sub", k_sub},
+		{"nop", k_void},
+		{"sub", remove_stack,
 		{"mul", k_mul},
 		{"mod", k_mod},
-		{"pchar", k_pchar},
-		{"pstr", k_pstr},
-		{"rotl", k_rotl},
-		{"rotr", k_rotr},
-		{"queue", k_queue},
-		{"stack", k_list},
+		{"pchar", char_print},
+		{"pstr", print_string},
+		{"rotl", rotate},
+		{"rotr", rot_down},
+		{"queue", k_line},
+		{"stack", main_stack},
 		{NULL, NULL}
 	};
 	unsigned int x = 0;
@@ -36,21 +36,21 @@ int run_f(char *cont, list_t **list, unsigned int co, FILE *f)
 	if (p && p[0] == '#')
 		return (0);
 	bus.arg = strtok(NULL, " \n\t");
-	while (ptr[x].op && p)
+	while (ptr[x].opcode && p)
 	{
-		if (strcmp(p, ptr[i].op) == 0)
+		if (strcmp(p, ptr[i].opcode) == 0)
 		{
 			ptr[x].funct(list, co);
 			return (0);
 		}
 		x++;
 	}
-	if (p && ptr[x].op == NULL)
+	if (p && ptr[x].opcode == NULL)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", co, p);
 		fclose(f);
 		free(cont);
-		f_liidt(*list);
+		f_list(*list);
 		exit(EXIT_FAILURE);
 	}
 	return (1);

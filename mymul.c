@@ -5,9 +5,9 @@
  * @count: line counter
  * Return: nothing
  */
-void k_mul(list_t **head, unsigned int count)
+void k_mul(stack_t **head, unsigned int count)
 {
-	list_int *i;
+	stack_t *i;
 	int l = 0, _abs;
 
 	i = *head;
@@ -25,8 +25,8 @@ void k_mul(list_t **head, unsigned int count)
 		exit(EXIT_FAILURE);
 	}
 	i = *head;
-	_abs = i->next->m * i->m;
-	i->next->m = _abs;
+	_abs = i->next->n * i->n;
+	i->next->n = _abs;
 	*head = i->next;
 	free(i);
 }

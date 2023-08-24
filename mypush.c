@@ -5,7 +5,7 @@
  * @count: line counter
  * Return: nothing
  */
-void k_push(liist_t **head, unsigned int count)
+void k_push(stack_t **head, unsigned int count)
 {
 	int i, j = 0, f = 0;
 

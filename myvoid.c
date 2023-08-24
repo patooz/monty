@@ -5,7 +5,7 @@
  * @count: line counter
  * Return: nothing
  */
-void k_void(list_t **head, unsigned int count)
+void k_void(stack_t **head, unsigned int count)
 {
 	(void) count;
 	(void) head;

@@ -5,9 +5,9 @@
  * @count: line counter
  * Return: nothing
  */
-void char_print(list_t **head, unsigned int count)
+void char_print(stack_t **head, unsigned int count)
 {
-	list_t *i;
+	stack_t *i;
 
 	i = *head;
 	if (!i)
@@ -18,7 +18,7 @@ void char_print(list_t **head, unsigned int count)
 		f_list(*head);
 		exit(EXIT_FAILURE);
 	}
-	if (i->m > 127 || i-> m < 0)
+	if (i->n > 127 || i->n < 0)
 	{
 		fprintf(stderr, "L%d: can't print, value range out\n", count);
 		fclose(bus.f);
@@ -26,5 +26,5 @@ void char_print(list_t **head, unsigned int count)
 		f_list(*head);
 		exit(EXIT_FAILURE);
 	}
-	printf("%c\n", i->m);
+	printf("%c\n", i->n);
 }

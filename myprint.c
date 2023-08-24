@@ -5,9 +5,9 @@
  * @count: line count
  * Return: nothing
  */
-void k_print(list_t **head, unsigned int count)
+void k_print(stack_t **head, unsigned int count)
 {
-	list_t *h;
+	stack_t *h;
 	(void)count;
 
 	h = *head;
@@ -15,7 +15,7 @@ void k_print(list_t **head, unsigned int count)
 		return;
 	while (h)
 	{
-		printf("%d\n", h->m);
+		printf("%d\n", h->n);
 		h = h->next;
 	}
 }

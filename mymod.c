@@ -5,9 +5,9 @@
  * @count: line counter
  * Return: nothing
  */
-void k_mod(list_t **head, unsigned int count)
+void k_mod(stack_t **head, unsigned int count)
 {
-	list_int *h;
+	stack_t *h;
 	int l = 0, _abs;
 
 	h = *head;
@@ -25,7 +25,7 @@ void k_mod(list_t **head, unsigned int count)
 		exit(EXIT_FAILURE);
 	}
 	h = *head;
-	if (h->m == 0)
+	if (h->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero \n", count);
 		fclose(bus.f);
@@ -33,8 +33,8 @@ void k_mod(list_t **head, unsigned int count)
 		f_list(*head);
 		exit(EXIT_FAILURE);
 	}
-	_abs = h->next->m % h->m;
-	h->next->m = _abs;
+	_abs = h->next->n % h->n;
+	h->next->n = _abs;
 	*head = h->next;
 	free(h);
 }

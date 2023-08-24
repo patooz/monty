@@ -5,17 +5,17 @@
  * @count: line counter
  * Return: nothing
  */
-void print_string(list_t **head, unsigned int count)
+void print_string(stack_t **head, unsigned int count)
 {
-	list_t *i;
+	stack_t *i;
 	(void)count;
 
 	i = *head;
 	while (i)
 	{
-		if (i->m > 127 || i->m <= 0)
+		if (i->n > 127 || i->n <= 0)
 			break;
-		printf("%c", i->m);
+		printf("%c", i->n);
 		i = i->next;
 	}
 	printf("\n");

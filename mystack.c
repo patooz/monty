@@ -4,9 +4,9 @@
  * mystack - frees a linked list
  * @head: head of the stack
  */
-void mystack(list_t *head)
+void f_list(stack_t *head)
 {
-	list_t *_abs;
+	stack_t *_abs;
 
 	_abs = head;
 	while (head)

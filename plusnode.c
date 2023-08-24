@@ -6,7 +6,7 @@
  * @m: value
  * Return: nothing
  */
-void plusnode(list_t **head, int m)
+void plusnode(stack_t **head, int n)
 {
 	list_t *_new, *_abs;
 
@@ -15,9 +15,9 @@ void plusnode(list_t **head, int m)
 	if (_new == NULL)
 		exit(0);
 	if (_abs)
-		_abs->p = _new;
-	_new->m = m;
+		_abs->prev = _new;
+	_new->n = n;
 	_new->next = *head;
-	_new->p = NULL;
+	_new->prev = NULL;
 	*head = _new;
 }
