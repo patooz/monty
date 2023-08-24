@@ -68,5 +68,7 @@ void k_line(list_t **head, unsigned int count);
 void rotate(stack_t **head, __attribute__((unused)) unsigned int count);
 void rot_down(stack_t **head, __attribute__((unused)) unsigned int count);
 void main_stack(stack_t **head, unsigned int count);
+void remove_stack(stack_t **head, unsigned int count);
+void k_change(stack_t **head, unsigned int count);
 
 #endif /** MAIN_H */
